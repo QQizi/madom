@@ -1,0 +1,118 @@
+@import '../../constants/vars';
+
+.bloc-02{
+  padding-bottom: 120px;
+  background: white;
+  padding-top: 70px;
+  @media (max-width: 800px) {
+    padding-top: 0px;
+    padding-bottom: 72px;
+  }
+  .block-text{
+    width: 497px;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+    h1{
+      @media (max-width: 800px) {
+        padding-right: 20px;
+      }
+    }
+    p{
+      padding-right: 25px;
+      @media (max-width: 800px) {
+        padding-right: 0;
+      }
+    }
+  }
+  .text-container{
+    margin-top: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+    img{
+      width: 27px;
+      height: 27px;
+    }
+    p{
+      color: $black;
+      margin: 0;
+      max-width: 440px;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+    }
+  }
+  .bloc02-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:24px;
+    width: 576px;
+    @media (max-width: 1176px) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: 800px) {
+      gap:12px;
+      width: 100%;
+      margin-top: 36px;
+    }
+  }
+  .list-item{
+    width: 176px;
+    height: 176px;
+    border-radius: 12px;
+    border: 1px solid $light-periwinkle;
+    background: $white;
+    display: flex;
+    box-shadow: 0px 7px 14px 0px rgba(0, 0, 0, 0.05);
+    transition: all .5s;
+    @media (max-width: 800px) {
+      width: 100%;
+      height: 52px;
+    }
+    &:hover{
+      transform: scale(105%);
+    }
+    .list-item-content{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      flex:1;
+      @media (max-width: 800px) {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 12px 14px;
+      }
+      svg{
+        width: 44px;
+        @media (max-width: 800px) {
+          width: 24px;
+        }
+      }
+      p{
+        margin: 0;
+        color: $black;
+        text-align: center;
+        max-width: 176px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        padding: 0 14px;
+        cursor: default;
+        @media (max-width: 800px) {
+          max-width: unset;
+          font-weight: 400;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

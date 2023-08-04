@@ -1,0 +1,212 @@
+.carousel-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 50px 0;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  .carousel-content{
+    margin: 0 24px;
+    position: relative;
+    width: 500px;
+    height: 410px;
+    @media (max-width: 800px) {
+      width: 100%;
+      height: auto;
+      min-height: 450px;
+    }
+  }
+  .carousel-card-next{
+    position: absolute;
+    width: 500px;
+    height: 410px;
+    border-radius: 12px;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.08);
+    padding: 39px 44px;
+    z-index: 2;
+    transition: all 0.5s;
+    background: #FFF;
+    opacity: 0;
+    transform: scale(0.8) translateY(-63px);
+    &.fadein{
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      z-index: 3;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+      height: auto;
+      min-height: 430px;
+      padding: 20px;
+    }
+  }
+  .card{
+    .card-content{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 44px;
+      @media (max-width: 800px) {
+        flex-direction: column;
+      }
+      img{
+        height: 100px;
+        width: 100px;
+        @media (max-width: 800px) {
+          height: 72px;
+          width: 72px;
+        }
+      }
+      .title{
+        color: #202020;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px; /* 150% */
+        margin: 0;
+        @media (max-width: 800px) {
+          text-align: center;
+        }
+      }
+      .subtitle{
+        margin: 0;
+        color: #5D5F64;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        @media (max-width: 800px) {
+          text-align: center;
+        }
+      }
+    }
+    .text{
+      color: #202020;
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px; /* 150% */
+      position: relative;
+      @media (max-width: 800px) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px; /* 150% */
+        text-align: center;
+      }
+      .icon{
+        width: 24px;
+        position: absolute;
+        bottom: 100%;
+        right: 100%;
+        @media (max-width: 800px) {
+          right: unset;
+          left:0;
+        }
+      }
+    }
+  }
+  .carousel-card{
+    position: absolute;
+    width: 500px;
+    height: 410px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.08);
+    padding: 39px 44px;
+    z-index: 3;
+    transition: all 0.5s;
+    &.fadeout{
+      opacity: 0;
+      transform: scale(1.2);
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+      height: auto;
+      min-height: 430px;
+      padding: 20px;
+    }
+  }
+  .carousel-card-behind{
+    width: 404px;
+    height: 370px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    @media (max-width: 800px) {
+      width: 90%;
+    }
+  }
+  .carousel-card-behind-two{
+    width: 308px;
+    height: 370px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    @media (max-width: 800px) {
+      width: 80%;
+    }
+  }
+  .slider-button{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid #D8DBE0;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    &.desktop-button{
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+    &.slider-button-left{
+      svg:first-child{
+        transform: rotate(180deg);
+      }
+    }
+    &.slider-button-right{
+
+    }
+    .svg-animation{
+      transform: scale(.25);
+      position: absolute;
+    }
+
+    .circle {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      &:hover{
+        animation: stroke .5s ease-out forwards;
+      }
+    }
+
+    @keyframes stroke {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+  .mobile-button{
+    display: none;
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+}

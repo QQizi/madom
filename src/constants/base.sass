@@ -1,0 +1,137 @@
+@import './vars'
+
+html
+  box-sizing: border-box
+  font-size: 100%
+  font-family: Poppins
+
+  // @media (max-width: 425px)
+  //   font-size: 80%
+
+  // @media (min-width: 426px)
+  //   font-size: 100%
+  //   rem: 14px
+
+*
+  box-sizing: inherit
+
+  &::before,
+  &::after
+    box-sizing: inherit
+
+.main-content
+  background-color: $white
+  margin: auto
+  max-width: 1440px
+
+a
+  text-decoration: none
+  color: inherit
+
+// firefox outline fix
+
+@-moz-document url-prefix()
+  ::-moz-focus-inner
+    border: none
+  select:-moz-focusring, select
+    color: transparent
+    text-shadow: 0px 0px 0px $slate-grey
+
+button
+  border: none
+
+// TEXT
+h1,
+h2,
+h3
+  font-family: Poppins
+
+h1
+  text-align: left
+
+h2
+  font-size: 36px
+  font-weight: 600
+  padding: 50px 100px
+  text-align: center
+
+  @media (max-width: 769px)
+    padding: 50px 80px
+
+  @media (max-width: 425px)
+    font-size: 24px
+    padding: 50px 30px
+
+h3
+  font-size: 1.5rem
+  text-align: center
+
+  @media (max-width: 425px)
+    font-size: 1.2rem
+
+h4
+  color: $charcoal-grey
+  font-family: Poppins
+  font-size: 0.75rem
+  height: 25px
+  letter-spacing: 0.8px
+  margin: 5px 0
+  text-align: left
+  text-transform: uppercase
+
+ul
+  list-style-type: none
+
+p
+  color: $black
+
+.blue
+  color: $sky-blue
+
+.spacer-30
+  height: 30px
+  content: ' '
+
+.spacer-20
+  height: 20px
+  content: ' '
+
+.marg-auto
+  margin: auto
+
+.margin-auto
+  margin: auto
+
+// ELEMENTS
+
+.separator
+  border-top: solid 1px $separator-grey
+  height: 1px
+  margin: 20px 0
+  width: 100%
+
+  @media (min-width: 1025px)
+    margin: 60px 0
+
+.separator-2
+  border-top: solid 1px $separator-grey
+  display: none
+  height: 1px
+  margin: 20px 0
+  width: 100%
+
+  @media (min-width: 1024px)
+    display: block
+    margin: 40px 0 0
+
+.underline
+  text-decoration: underline
+  
+.mb-20
+  margin-bottom: 20px
+  
+.mb-32
+  margin-bottom: 32px
+  
+.mt-32
+  margin-top: 32px

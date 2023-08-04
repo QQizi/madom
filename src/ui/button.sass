@@ -1,0 +1,98 @@
+@import '../constants/vars'
+
+.btn
+  border: 0
+  border-radius: 4px
+  color: $white
+  cursor: pointer
+  font-size: 1rem
+  letter-spacing: .4px
+  line-height: 20px
+  min-height: 62px
+  min-width: 200px
+  padding: 18px 28px
+  text-transform: uppercase
+
+  @media (min-width: 768px)
+    font-size: .9rem
+
+  &.primary
+    background-color: $orange
+    box-shadow: 0 2px 0 0 $dark-orange
+
+  &.bold
+    font-weight: 600
+
+  &.w100
+    width: 100%
+
+  &.valid
+    background-color: $blue
+    box-shadow: 0 4px 0 0 $dark-sky-blue
+    max-height: 56px
+    width: 100%
+
+    @media (min-width: 1024px)
+      width: auto
+
+    @media (max-width: 767px)
+      max-height: none
+
+  &.small-height
+    min-height: auto
+    padding: 11px 28px
+
+  &.sm-font
+    font-size: 12px
+
+  &.lg-padding
+    padding: 21px 46px
+
+  &.valid-right
+    margin-top: 30px
+    margin-bottom: 40px
+
+    @media (min-width: 426px)
+      float: right
+      width: 220px
+
+      &::after
+        content: ""
+        clear: both
+        display: table
+
+  &.inline
+    display: inline-block
+
+  &.small
+    min-height: auto
+    min-width: auto
+    padding: 4px
+    box-shadow: none
+    font-size: 14px
+    text-transform: none
+
+    @media (max-width: 1024px)
+      width: auto
+
+.btn-nav
+  border: solid 1px $dodger-blue
+  border-radius: 4px
+  color: $dodger-blue
+  font-size: .9rem
+  padding: 10px
+  text-transform: none
+  width: 109px
+  text-align: center
+  min-height: 44px
+
+  &.border-b
+    min-height: 42px
+    border: 0.704453px solid #6FA5FF
+    box-shadow: 0 2px 0 0 #4581E4
+
+.connexion-btn
+  margin-top: 10px
+
+label.btn
+  text-align: center

@@ -1,0 +1,104 @@
+@import '../../constants/vars';
+
+.bloc-03{
+  padding-top: 106px;
+  background: linear-gradient(256deg, #FBFBFB 0%, #F1F1F1 100%);
+  padding-bottom: 111px;
+  @media (max-width: 800px) {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .content {
+    @media (max-width: 1176px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .picture-bloc{
+    position: relative;
+    width: 577px;
+    height: 577px;
+    @media (max-width: 800px) {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    img{
+      width: 577px;
+      height: 577px;
+      @media (max-width: 800px) {
+        width: 100%;
+        height: auto;
+      }
+      &.illu{
+        position: absolute;
+        top: 51px;
+        left: -130px;
+        width: 332px;
+        height: 399px;
+        @media (max-width: 800px) {
+          width: 200px;
+          height: auto;
+          left:5px;
+        }
+      }
+      &.notif{
+        position: absolute;
+        top: 153px;
+        left: -18px;
+        width: 307px;
+        height: 112px;
+        @media (max-width: 800px) {
+          width: 200px;
+          height: auto;
+          top: 113px;
+          left:-25px;
+          transform: scale(.8);
+        }
+      }
+    }
+  }
+  .block-text{
+    width: 476px;
+    @media (max-width: 1176px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    p{
+      margin: 0;
+      margin-bottom: 24px;
+    }
+    button{
+      @media (max-width: 800px) {
+        display: inline-block;
+        margin-bottom: 60px;
+      }
+    }
+  }
+  .list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+    .listItem{
+      display: flex;
+      flex-direction: row;
+      gap:8px;
+      align-items: center;
+      span{
+        color: $slate-grey;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        @media (max-width: 800px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

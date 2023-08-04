@@ -1,0 +1,201 @@
+@import '../../constants/vars';
+
+.bloc-06{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: $white;
+  @media (max-width: 800px) {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  .content{
+    flex-direction: column;
+  }
+  .block-text{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    @media (max-width: 1176px) {
+     flex-direction: column;
+    }
+    @media (max-width: 800px) {
+      margin-bottom: 0;
+    }
+    >div{
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+      @media (max-width: 1176px) {
+        margin-bottom: 44px;
+        gap:16px;
+      }
+      @media (max-width: 800px) {
+        margin-bottom: 44px;
+        width: 100%;
+      }
+      h1{
+        margin: 0;
+        @media (max-width: 1176px) {
+          padding-right: 40px;
+        }
+      }
+      p{
+        width: 776px;
+        color: $slate-grey;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; /* 150% */
+        margin: 0;
+        @media (max-width: 800px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 23px;
+    .card{
+      width: 200px;
+      height: 200px;
+      background: rgb(218,229,253);
+      background: linear-gradient(180deg, rgba(218,229,253,1) 0%, rgba(177,197,225,1) 100%);
+      border-radius: 12px;
+      padding: 40px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      @media (max-width: 1176px) {
+        width: 100%!important;
+      }
+      @media (max-width: 800px) {
+        padding: 20px;
+      }
+      &.card-01{
+        width: 677px;
+        height: 420px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+          text-align: center;
+        }
+        .subtitle{
+          padding: 0 80px;
+          @media (max-width: 800px) {
+            padding: 0 20px;
+          }
+        }
+        .icon-bloc-01{
+          width:100px;
+          height:100px;
+          margin-bottom: 24px;
+        }
+      }
+      &.card-02{
+        width: 476px;
+        height: 420px;
+        display: flex;
+        justify-content: flex-end;
+        p{
+          text-align: center;
+          overflow-wrap: break-word;
+        }
+        .icon-bloc-01{
+          width:208px;
+          height:264px;
+          position: absolute;
+          top:36px;
+          left:50%;
+          transform: translateX(-50%);
+        }
+      }
+      &.card-03{
+        width: 476px;
+        height: 420px;
+        justify-content: center;
+        align-items: center;
+        .icon-bloc-06-card-03{
+          width: 307px;
+          height: 112px;
+        }
+        p.subtitle{
+          width:388px;
+          text-align: center;
+          z-index: 1;
+          @media (max-width: 1176px) {
+            width: 100%;
+          }
+        }
+      }
+      &.card-04{
+        width: 677px;
+        height: 420px;
+        p.title{
+          width:280px;
+          @media (max-width: 1176px) {
+            width: 100%;
+            text-align: left;
+          }
+        }
+        p.subtitle{
+          width:431px;
+          @media (max-width: 1176px) {
+            width: 100%;
+            text-align: left;
+          }
+        }
+        .bloc04-picture{
+          position: absolute;
+          left:0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+        }
+      }
+      p.title{
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Manrope;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 42px; /* 150% */
+        margin: 0;
+        margin-bottom: 8px;
+        @media (max-width: 800px) {
+          text-align: center;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 36px;
+        }
+      }
+      p.subtitle{
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        margin: 0;
+        @media (max-width: 800px) {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../constants/vars';
+
+.bloc-01{
+  @media (max-width: 1176px) {
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    padding: 0 20px;
+  }
+  .bloc-01-container{
+    border-radius: 16px;
+    background: linear-gradient(176deg, $dark-sky-blue 0%, #8FB9FF 100%);
+    box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    transform: translateY(-70px);
+    @media (max-width: 800px) {
+      padding-top: 0;
+    }
+    .content{
+      justify-content: space-around;
+      @media (max-width: 800px) {
+        flex-direction: column;
+        padding-top: 36px;
+      }
+    }
+    .subBlocContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @media (max-width: 800px) {
+        margin-bottom: 36px;
+      }
+      .iconContainer{
+        width: 106px;
+        height: 106px;
+        background-color: white;
+        border-radius: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        @media (max-width: 800px) {
+          width: 72px;
+          height: 72px;
+        }
+      }
+      p{
+        color: $white;
+        margin-bottom: 4px;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px; /* 150% */
+      }
+      span {
+        color: $white;
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 171.429% */
+        max-width: 328px;
+        @media (max-width: 1176px) {
+          padding:0 10px;
+        }
+      }
+    }
+  }
+}

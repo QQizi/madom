@@ -1,0 +1,190 @@
+@import '../../constants/vars';
+
+.bloc-07{
+  padding-top:80px;
+  background: white;
+  padding-bottom: 120px;
+  @media (max-width: 800px) {
+    padding-top: 44px;
+    padding-bottom: 72px;
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media (max-width: 1176px) {
+      align-items: flex-start;
+    }
+    h1{
+      color: $black;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 58px; /* 120.833% */
+      margin: 0;
+    }
+    .subtitle{
+      color: $slate-grey;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px; /* 150% */
+      width: 776px;
+      margin-bottom: 51px;
+      @media (max-width: 1176px) {
+        margin: 0;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      @media (max-width: 1176px) {
+        flex-direction: column;
+      }
+      .imageContainer{
+        position: relative;
+      }
+      .bloc-07-picture{
+        width:676px;
+
+        @media (max-width: 1176px) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        &.transition{
+          transition: all .5s;
+        }
+        &.isTransitioning{
+          opacity: 0;
+        }
+      }
+      .bloc-07-next-picture{
+        position: absolute;
+        top:0;
+        left:0;
+        width:676px;
+        opacity: 0;
+        @media (max-width: 1176px) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        &.transition{
+          transition: all .5s .5s;
+        }
+        &.isTransitioning{
+          opacity: 1;
+        }
+      }
+      .portrait-block{
+        width: 476px;
+        height: 476px;
+        border-radius: 24px;
+        background: #D7E6FF;
+        padding: 56px 48px;
+        @media (max-width: 1176px) {
+          width: 100%;
+          height: auto;
+        }
+        @media (max-width: 800px) {
+          padding: 32px 20px;
+        }
+        p{
+          margin: 0;
+        }
+        .title{
+          color: $black;
+          font-family: Poppins;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 36px; /* 150% */
+        }
+        .subtitle{
+          color: $slate-grey;
+          font-family: Poppins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+          text-align: left;
+          width: auto;
+          margin-bottom: 44px;
+        }
+        .text{
+          color: $black;
+          font-family: Poppins;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 36px; /* 150% */
+          position: relative;
+          margin-bottom: 44px;
+          @media (max-width: 1176px) {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-bottom: 32px;
+          }
+          img{
+            width:24px;
+            height:24px;
+            position: absolute;
+            top:-25px;
+            left:0;
+          }
+        }
+        .slider-button-container{
+          display: flex;
+          flex-direction: row;
+          gap: 24px;
+          .slider-button{
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 24px;
+            border: 1px solid $light-periwinkle;
+            cursor: pointer;
+            position: relative;
+            &.slider-button-left{
+              svg:first-child{
+                transform: rotate(180deg);
+              }
+            }
+            .svg-animation{
+              transform: scale(.25);
+              position: absolute;
+            }
+
+            .circle {
+              stroke-dasharray: 1000;
+              stroke-dashoffset: 1000;
+              &:hover{
+                animation: stroke .5s ease-out forwards;
+              }
+            }
+
+            @keyframes stroke {
+              to {
+                stroke-dashoffset: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

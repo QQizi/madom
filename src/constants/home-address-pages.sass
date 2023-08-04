@@ -1,0 +1,310 @@
+@import './vars'
+
+.main-title
+  font-size: 4rem
+  line-height: 1.3
+  font-weight: 400
+  margin: 0
+  width: 600px
+
+  .bold
+    font-weight: 600
+
+  @media (max-width: 1180px)
+    font-size: 3rem
+
+  @media (max-width: 768px)
+    margin-bottom: 40px
+    text-align: center
+    width: 100%
+
+  @media (max-width: 425px)
+    font-size: 2rem
+
+.left-title
+  font-size: 1.25rem
+  font-weight: 600
+  margin: 0
+  padding: 50px 24px 16px 24px
+  text-align: left
+
+  @media (min-width: 426px)
+    font-size: 2rem
+
+  @media (min-width: 769px)
+    padding: 100px 130px 15px 130px
+
+.section
+  padding-bottom: 50px
+
+  &.grey-bg
+    background-color: $light-grey
+  &.no-pad
+    padding-bottom: 0
+
+  h2
+    margin: 0
+    padding-top: 48px
+    padding-bottom: 10px
+
+    @media (min-width: 426px)
+      margin: 0
+      padding-top: 80px
+      padding-bottom: 10px
+
+  p
+    text-align: center
+
+.section-address
+  h2
+    padding-top: 80px
+
+    @media (min-width: 1024px)
+      padding-top: 120px
+
+// ICONS
+
+.small-icon
+  height: 136px
+  width: 136px
+  margin: auto
+  background-color: $white
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+
+  img
+    height: 72px
+    width: 72px
+
+// CONTAINERS
+
+.intro
+  background: linear-gradient(180deg, rgba(111, 165, 255, 0.15), rgba(217, 217, 217, 0))
+  padding: 100px 130px
+
+  @media (max-width: 1024px)
+    padding: 100px 45px
+
+  @media (max-width: 425px)
+    padding: 100px 30px
+
+  .blue-block
+    background: linear-gradient(180deg, #4581E4, #6FA5FF)
+    border-radius: 10px
+    padding: 0
+    margin-top: 48px
+
+    @media (min-width: 1024px)
+      padding: 16px 60px
+      margin-top: 64px
+
+    p
+      color: $white
+      font-family: Poppins
+      font-size: 20px
+      margin-bottom: 0
+
+      @media (min-width: 1024px)
+        font-size: 24px
+
+    ul
+      padding: 0 32px
+
+      li
+        padding: 32px 0
+        text-align: center
+        border-bottom: 1px solid $light-periwinkle
+
+        @media (min-width: 1024px)
+          border: none
+
+  &.intro-transfert
+    padding: 100px 30px 100px 130px
+
+    @media (max-width: 1024px)
+      padding: 100px 45px
+
+    @media (max-width: 425px)
+      padding: 100px 30px
+
+    .main-title
+      font-weight: 600
+      font-size: 40px
+      line-height: 48px
+
+      @media (min-width: 1024px)
+        font-size: 56px
+        line-height: 67px
+
+    .stars-line
+      display: flex
+      margin-left: 1rem
+
+    .intro-comments
+      display: flex
+      align-items: center
+
+      p
+        font-weight: 500
+
+.flex-section
+  align-items: center
+  display: flex
+  flex-direction: row
+
+  @media (max-width: 768px)
+    flex-direction: column
+
+.content-center
+  text-align: center
+  width: 50%
+
+  @media (max-width: 768px)
+    width: 100%
+
+.content-start
+  width: 50%
+  padding-left: 180px
+
+  @media (max-width: 768px)
+    width: 100%
+    padding: inherit
+
+  @media (min-width: 1024px)
+    padding-left: 130px
+
+  p
+    font-family: Poppins
+    font-size: 16px
+    font-weight: 400
+
+.inline-list
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  list-style-type: none
+  margin: 0
+  text-align: center
+  padding-inline-start: 0
+
+  @media (max-width: 768px)
+    flex-direction: column
+
+  li
+    padding: 30px
+    min-height: 160px
+
+  &.comments
+    padding: 30px 24px
+
+    @media (min-width: 425px)
+      padding: 50px 50px
+
+    @media (min-width: 1024px)
+      padding: 50px 130px
+
+    li
+      &:first-child
+        margin-right: 30px
+      &:last-child
+        margin-left: 30px
+
+      @media (max-width: 768px)
+        &:first-child
+          margin: auto
+        &:last-child
+          margin: auto
+          margin-top: 20px
+
+    li
+      @media (max-width: 768px)
+        margin: auto
+        margin-top: 20px
+        max-width: 100%
+
+      @media (max-width: 425px)
+        margin: 0
+        margin-top: 20px
+
+.section-avantage
+  h2
+    padding-bottom: 0
+
+.advantages
+  padding: 24px
+  margin: 0
+  display: grid
+  grid-gap: 12px
+  grid-template-rows: repeat(4, 1fr)
+
+  @media (min-width: 425px)
+    padding: 40px
+
+  @media (min-width: 1024px)
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: none
+    padding: 40px 20px
+
+  @media (min-width: 1440px)
+    padding: 40px 130px
+
+  li
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    box-shadow: 0px 10px 25px 0px#0000001A
+    padding: 24px
+
+    @media (min-width: 1440px)
+      width: 266px
+
+    .small-icon
+      height: 40px
+      width: 40px
+      flex: 0 0 40px
+      border: 1px solid $dark-sky-blue
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0
+
+      img
+        height: 22px
+        width: 22px
+
+    h3,p
+      text-align: left
+
+  h3
+    font-weight: 600
+    font-size: 1rem
+    line-height: 1.4
+
+  p
+    line-height: 1.6
+
+    @media (min-width: 1024px)
+      font-size: 14px
+      font-weight: 400
+
+.FAQ-container
+  margin: 28px 24px 16px
+
+  @media (min-width: 1024px)
+    margin: 48px 130px 24px
+
+  .cgu-line
+    margin-top: 24px
+
+  .cgu-line .cgu-line-content
+    text-align: left
+
+.AddressPage
+  .example
+    margin-top: 48px
+
+    @media (min-width: 1024px)
+      margin-top: 80px
